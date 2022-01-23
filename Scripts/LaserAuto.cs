@@ -5,7 +5,7 @@ using UnityEngine.Animations;
 
 
 
-// a simple script to randomize laser asset animation
+// a simple script to automatically randomize laser asset animation
 // the laser animation consists of two animation loops
 // the laser_play animation and the laser_pause animation
 public class LaserAuto : MonoBehaviour
