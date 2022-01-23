@@ -11,7 +11,7 @@ using UnityEngine.Animations;
 public class LaserAuto : MonoBehaviour
 {
 
-	// these are multipliers applied to the animation clip playback speeds
+    // these are multipliers applied to the animation clip playback speeds
     private float speed; 		// the speed the laser moves
     private float offset;		// the delay until the effect starts again
     private Animator anim;		// the Animator control component
@@ -22,17 +22,17 @@ public class LaserAuto : MonoBehaviour
     {        
         anim = this.gameObject.GetComponent<Animator>();
 
-		// initialize the speed and offset multipliers
+	// initialize the speed and offset multipliers
         UpdateLasers();
 
-		// apply the offset multiplier values to the play_speed & pause_speed animation variables
+	// apply the offset multiplier values to the play_speed & pause_speed animation variables
         anim.SetFloat("play_speed", speed); 
         anim.SetFloat("pause_speed", offset);
     }
 
 
-	// this randomly sets the movement speed and delay of the laser animations
-	// it's triggered by an Animation Event when the laser_play animation clip completes
+    // this randomly sets the movement speed and delay of the laser animations
+    // it's triggered by an Animation Event when the laser_play animation clip completes
     public void UpdateLasers()
     {
         speed = Rand(1.0f, 3.0f);
